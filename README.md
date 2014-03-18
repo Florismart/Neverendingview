@@ -28,8 +28,8 @@ Horizontal
     xmlns:neverending="http://schemas.android.com/apk/res-auto"
     android:id="@+id/my_neverendingview1"
     style="@style/Neverendingview.Horizontal"
-    app:enabled="true"
-    app:mode="natural" >
+    neverending:enabled="true"
+    neverending:mode="natural" >
 
     <LinearLayout
         style="@style/NeverendingContainer.Horizontal"
@@ -52,8 +52,8 @@ Vertical
     xmlns:neverending="http://schemas.android.com/apk/res-auto"
     android:id="@+id/my_neverendingview2"
     style="@style/Neverendingview.Vertical"
-    app:enabled="true"
-    app:mode="natural" >
+    neverending:enabled="true"
+    neverending:mode="natural" >
 
     <LinearLayout
         style="@style/NeverendingContainer.Vertical"
