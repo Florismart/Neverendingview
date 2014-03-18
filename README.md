@@ -13,7 +13,7 @@ Setup
 __1.__ In Eclipse, import the library as an Android library project. Project > Clean to generate the binaries 
 you need, like R.java, etc.
 
-__2.__ Then, add Accordino as a dependency to your existing project.
+__2.__ Then, add Neverendingview as a dependency to your existing project.
 
 
 XML Usage
