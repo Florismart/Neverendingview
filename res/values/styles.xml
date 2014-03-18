@@ -1,0 +1,37 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light" />
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="Neverendingview">
+        <item name="android:padding">10dp</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="Neverendingview.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Neverendingview.Vertical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="NeverendingContainer"></style>
+
+    <style name="NeverendingContainer.Horizontal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="NeverendingContainer.Vertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
