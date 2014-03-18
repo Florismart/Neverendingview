@@ -29,7 +29,8 @@ Horizontal
     android:id="@+id/my_neverendingview1"
     style="@style/Neverendingview.Horizontal"
     neverending:enabled="true"
-    neverending:mode="natural" >
+    neverending:mode="natural"
+    neverending:speed="falcon">
 
     <LinearLayout
         style="@style/NeverendingContainer.Horizontal"
@@ -53,7 +54,8 @@ Vertical
     android:id="@+id/my_neverendingview2"
     style="@style/Neverendingview.Vertical"
     neverending:enabled="true"
-    neverending:mode="natural" >
+    neverending:mode="natural"
+    neverending:speed="rockBiter">
 
     <LinearLayout
         style="@style/NeverendingContainer.Vertical"
