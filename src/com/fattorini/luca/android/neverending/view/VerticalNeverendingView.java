@@ -8,6 +8,7 @@ import android.widget.ScrollView;
 import com.fattorini.luca.android.neverending.R;
 import com.fattorini.luca.android.neverending.core.NeverendingModes;
 import com.fattorini.luca.android.neverending.core.NeverendingScrollController;
+import com.fattorini.luca.android.neverending.core.NeverendingSpeeds;
 import com.fattorini.luca.android.neverending.core.OnLimitReachedEventListener;
 import com.fattorini.luca.android.neverending.core.entity.NeverendingLopeEntity;
 
@@ -37,14 +38,17 @@ public class VerticalNeverendingView extends ScrollView implements NeverendingSc
 	protected void initAttributes(final Context context, final AttributeSet attrs) {
 		boolean enabled = true;
 		NeverendingModes mode = NeverendingModes.natural;
+		NeverendingSpeeds speed = NeverendingSpeeds.falcon;
 		if (attrs != null) {
 			TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Neverender);
 			enabled = a.getBoolean(R.styleable.Neverender_enabled, true);
 			int modeIndex = a.getInteger(R.styleable.Neverender_mode, 0);
 			mode = NeverendingModes.values()[modeIndex > NeverendingModes.values().length ? 0 : modeIndex];
+			int speedIndex = a.getInteger(R.styleable.Neverender_speed, 0);
+			speed = NeverendingSpeeds.values()[speedIndex > NeverendingSpeeds.values().length ? 0 : speedIndex];
 			a.recycle();
 		}
-		controller = new NeverendingScrollController(enabled, mode, this, new NeverendingLopeEntity(2, 10));
+		controller = new NeverendingScrollController(enabled, mode, this, new NeverendingLopeEntity(speed));
 	}
 
 	@Override

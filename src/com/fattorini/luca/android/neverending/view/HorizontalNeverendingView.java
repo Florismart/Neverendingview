@@ -38,14 +38,17 @@ public class HorizontalNeverendingView extends HorizontalScrollView implements N
 	protected void initAttributes(final Context context, final AttributeSet attrs) {
 		boolean enabled = true;
 		NeverendingModes mode = NeverendingModes.natural;
+		NeverendingSpeeds speed = NeverendingSpeeds.falcon;
 		if (attrs != null) {
 			TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Neverender);
 			enabled = a.getBoolean(R.styleable.Neverender_enabled, true);
 			int modeIndex = a.getInteger(R.styleable.Neverender_mode, 0);
 			mode = NeverendingModes.values()[modeIndex > NeverendingModes.values().length ? 0 : modeIndex];
+			int speedIndex = a.getInteger(R.styleable.Neverender_speed, 0);
+			speed = NeverendingSpeeds.values()[speedIndex > NeverendingSpeeds.values().length ? 0 : speedIndex];
 			a.recycle();
 		}
-		controller = new NeverendingScrollController(enabled, mode, this, new NeverendingLopeEntity(NeverendingSpeeds.rockBiter));
+		controller = new NeverendingScrollController(enabled, mode, this, new NeverendingLopeEntity(speed));
 	}
 
 	@Override

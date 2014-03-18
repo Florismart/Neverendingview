@@ -6,6 +6,10 @@
             <enum name="innatural" value="1" />
         </attr>
         <attr name="enabled" format="boolean" />
+        <attr name="speed">
+            <enum name="falcon" value="0" />
+            <enum name="rockBiter" value="1" />
+        </attr>
     </declare-styleable>
 
 </resources>
